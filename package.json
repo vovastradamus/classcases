@@ -1,0 +1,20 @@
+{
+  "name": "classcases",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel public/index.html --open",
+    "build": "rollup -c",
+    "build_": "parcel build src/index.js --no-minify -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-json": "^4.1.0",
+    "jest": "^26.6.3",
+    "parcel": "^1.12.4",
+    "rollup": "^2.36.1"
+  }
+}
