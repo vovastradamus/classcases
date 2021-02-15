@@ -1,9 +1,9 @@
-import passStyle from "../src";
+import classcase from "../src";
 
 ((el) => {
   console.time("classSets");
   el.classList.add(
-    ...passStyle({
+    ...classcase({
       ptb_r: 2,
       plr_r: 1,
       maa_r: 10,

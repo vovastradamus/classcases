@@ -12,7 +12,6 @@ function createStyleTag() {
   const style = document.createElement("style");
   const nextSibling = head.lastElementChild;
 
-  style.setAttribute(PLUGIN_ATTR, "styled-sheet");
   style.setAttribute(PLUGIN_ATTR_VERSION, PLUGIN_VERSION);
 
   head.insertBefore(style, nextSibling);
@@ -47,13 +46,13 @@ export class Sheet {
     });
   };
 
-  passStyle = (...args) => {
+  classcase = (...args) => {
     const sheet = this.styleNode.sheet;
     const { parsers } = this;
     const [rules] = args;
 
     if (args.length == 2) {
-      return this.passStyle({ [args[0]]: args[1] });
+      return this.classcase({ [args[0]]: args[1] });
     }
 
     const styles = Object.entries(rules)
@@ -87,5 +86,5 @@ export class Sheet {
 const sheet = new Sheet();
 
 export const bindStyleCases = sheet.bindStyleCases;
-export const passStyle = sheet.passStyle;
+export const classcase = sheet.classcase;
 export { sheet as defaultSheet };

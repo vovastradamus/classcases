@@ -4,18 +4,16 @@ import fontCase from "./font.case";
 import widthCase from "./width.case";
 import flexCase from "./flex.case";
 
-console.time("rulesInit");
 [
   spacingCase.install,
   fontCase.install,
   widthCase.install,
   flexCase.install,
 ].forEach((installer) => installer(defaultSheet));
-console.timeEnd("rulesInit");
 
 export {
-  passStyle,
+  classcase,
   bindStyleCases,
   defaultSheet,
-  passStyle as default,
+  classcase as default,
 } from "./sheet";
