@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "module": "dist/index.js",
   "scripts": {
     "start": "parcel public/index.html --open",
     "build": "rollup -c",
